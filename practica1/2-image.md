@@ -27,13 +27,23 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+
+En la terminal una vez que se inicie sesión con una cuenta de Docker Desktop, iuntroducir el siguiente comando:
+```
+docker pull hello-world
+```
+![Imagen](imagenes/dockerinfo1.png)
 
 **¿Qué es nginx**
-# COMPLETAR 
+
+NGINX es un software de servidor web de código abierto. En su versión inicial, funcionaba en servidores web HTTP. Sin embargo, hoy en día también sirve como proxy inverso, balanceador de carga HTTP y proxy de correo electrónico para IMAP, POP3 y SMTP. NGINX ofrece una arquitectura asíncrona y controlada por eventos, lo que lo hace confiable para la velocidad y la escalabilidad¹. Por su capacidad para manejar muchas conexiones y su velocidad, muchos sitios web de alto tráfico usan el servicio de NGINX.
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+
+En la terminal ejecutar el comando:
+```terminal
+docker pull nginx:alpine
+```
 
 ### Listar imágenes
 
@@ -41,7 +51,7 @@ Descargar la imagen  **nginx** en la versión **alpine**
 docker images
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+![Imagen](imagenes/dockerimg.png)
 
 **Identificadores**
 En Docker, se utilizan varios identificadores para diferenciar de manera única los elementos del sistema, como imágenes, contenedores, volúmenes y redes. Estos identificadores son generados automáticamente por Docker y son únicos dentro del contexto del sistema Docker en el que se encuentran. 
@@ -55,10 +65,14 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+En la terminal una vez que se inicie sesión con una ceunta de Docker hub, iuntroduciir el siguiente comando:
+```
+docker inspect <nombre imagen>
+```
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+
+El ID de una imagen Docker se genera automáticamente cuando se construye una imagen. Este ID es un identificador único que Docker utiliza para referirse a la imagen en sus operaciones internas. Sin embargo, Docker no especifica públicamente el algoritmo exacto que utiliza para generar estos IDs. Es importante mencionar que puedes referirte a una imagen Docker por su ID completo, o por cualquier número único de caracteres iniciales del ID.
 
 ### Filtrar imágenes
 
@@ -75,7 +89,11 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+
+Ejecutar el siguiente comando:
+```
+docker rmi hello-world:latest
+```
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
