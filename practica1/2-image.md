@@ -6,8 +6,11 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 ![Imagen](imagenes/imagen.PNG)
 
 
-## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+## ¿Cuál es la relación entre una imagen y un contenedor?
+
+Una imagen de Docker es una plantilla de solo lectura que contiene instrucciones para crear un contenedor. Las imágenes representan una instantánea o un esquema de las bibliotecas y dependencias necesarias dentro de un contenedor para que se ejecute una aplicación. Por otro lado, un contenedor de Docker es una instancia de una imagen. Es como una máquina virtual ligera que contiene la aplicación, sus dependencias y configuraciones.
+De manera simple las imágenes son las plantillas y los contenedores son las instancias basadas en esas plantillas. 
+
 
 ![Imagen y contenedores](imagenes/imagenYcontenedores.JPG)
 ## Comandos para imágenes
